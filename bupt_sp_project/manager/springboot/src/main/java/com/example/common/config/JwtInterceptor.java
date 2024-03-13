@@ -43,6 +43,7 @@ public class JwtInterceptor implements HandlerInterceptor {
         if (ObjectUtil.isEmpty(token)) {
             throw new CustomException(ResultCodeEnum.TOKEN_INVALID_ERROR);
         }
+        //所有用户基类，保存账号、密码、头像
         Account account = null;
         try {
             // 解析token获取存储的数据
